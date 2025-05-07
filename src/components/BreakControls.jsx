@@ -2,6 +2,8 @@ import React from 'react';
 import { FaArrowDown } from "react-icons/fa";
 import { FaArrowUp } from "react-icons/fa";
 
+
+
 // control duration of break with 2 functions
 const BreakControls = ({breakLength, setBreakLength, isRunning }) => {
     const increment = () => {
