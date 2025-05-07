@@ -20,12 +20,12 @@ const SessionControls = ({ sessionLength, setSessionLength, isRunning, setTimeRe
   return (
     
     <div>
-      <h2 id="break-label">Session Length</h2>
-              <button id="break-decrement" onClick={decrement}>
+      <h2 id="session-label">Session Length</h2>
+              <button id="session-decrement" onClick={decrement}>
               <FaArrowDown />
               </button>
-              <span id="break-length"> {sessionLength} </span>
-              <button id="break-increment" onClick={increment}>
+              <span id="session-length">{sessionLength}</span>
+              <button id="session-increment" onClick={increment}>
               <FaArrowUp />
               </button>
     </div>
