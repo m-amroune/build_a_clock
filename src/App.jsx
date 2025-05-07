@@ -4,7 +4,7 @@ import BreakControls from './components/BreakControls'
 import { useState } from 'react'
 
 function App() {
-  const [breakLength, setBreakLength] = useState(5); // state time of break
+  const [breakLength, setBreakLength] = useState(5); // state duration of break
   const [isRunning] = useState(false);  
 
   return (
