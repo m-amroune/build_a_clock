@@ -1,17 +1,31 @@
-import React from 'react'
+import React from 'react';
 
-// display timer label, time remaining and three buttons for start, stop and reset
-
-const Timer = ({ timerLabel, timeRemaining, handleStart, handleStop, handleReset }) => {
+// Timer display and controls component
+const Timer = ({ timerLabel, timeLeft, handleStartStop, handleReset, isRunning }) => {
   return (
     <div>
-      <h2>{timerLabel}</h2>
-      <p id="time-remaining">{timeRemaining}</p>
-<button id="start_stop" onClick={handleStart}>Start</button>
-<button id="stop" onClick={handleStop}>Stop</button>
-<button id="reset" onClick={handleReset}>Reset</button>
-    </div>
-  )
-}
+      {/* Display whether it's a "session" or a "break" */}
+      <h2 id="timer-label">{timerLabel}</h2>
 
-export default Timer
+      <p id="time-left">{timeLeft}</p>
+
+      <button 
+        id="start_stop" 
+        onClick={handleStartStop}
+        aria-label={isRunning ? 'Pause the timer' : 'Start the timer'}
+      >
+        {isRunning ? 'Pause' : 'Start'}
+      </button>
+
+      <button 
+        id="reset" 
+        onClick={handleReset}
+        aria-label="Reset the timer"
+      >
+        Reset
+      </button>
+    </div>
+  );
+};
+
+export default Timer;
